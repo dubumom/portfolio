@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+
+/* 오프닝 글자체 */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+/* 제목 글자체 */
+@font-face {
+  font-family: 'PFStardust';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "glitch";
+  font-weight: 400;
+  src: url("../font/Doctor\ Glitch.otf")
+}
+
+/* 기본 글자체 */
+@font-face {
+  font-family: 'NIXGONM-Vb';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* 기본서식 및 공통 서식 */
+html{overflow: hidden;}
+
+body{
+  background: black;
+  color: #fff;
+  font-family: 'NIXGONM-Vb', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* 메인 서식 공통 */
+main section {
+  width: 100vw; height: 100vh;
+  background: #000;
+}
+
+.pos {
+  position: absolute;
+  left: 0; bottom: -100%;
+  z-index: 10;
+}
+.noise {
+  position: absolute; top: 0; left: 0;
+  z-index: 10;
+  width: 100%; height: 100%;
+  /* pointer-events: none; */
+  opacity: 0.1;
+}
+
+.hidden {display: none;}
+.block {display: block;}
+.caption {
+  font-family: 'glitch', cursive;
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.flex {display: flex;}
+
+.skip {
+  position: absolute;
+  z-index: 100;
+  bottom: 300px; left: 47%;
+  font-size: 30px;
+  cursor: pointer;
+}

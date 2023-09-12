@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우예지의 portfolio</title>
+    <!-- 초기화 -->
+    <link href="./css/reset.css" type="text/css" rel="stylesheet">
+
+    <!-- 기본, 공통서식 -->
+    <link href="./css/base.css" type="text/css" rel="stylesheet">
+  
+    <!-- 레이아웃서식 -->
+    <link href="./css/layout.css" type="text/css" rel="stylesheet">
+  
+    <!-- 콘텐츠 내용 서식 -->
+    <link href="./css/main.css" type="text/css" rel="stylesheet">
+  
+    <!-- 스와이퍼 슬라이드 서식 -->
+    <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+  
+    <!-- 아이콘폰트 주소 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+    <!-- css3속성 사용시 접두사 자동으로 붙여주는 스크립트 소스 -->
+    <script src="./script/prefixfree.min.js"></script>
+  
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  
+    <!-- 제이쿼리 ui라이브러리 -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  
+    <!-- 제이쿼리 쿠키파일 -->
+    <script src="./script/jquery.cookie.js"></script>
+  
+  <!-- 노이즈 효과 -->
+    <script src="./script/noise.js"></script>
+
+    <!-- 제이쿼리 공통 스크립트 -->
+    <script src="./script/layout.js"></script>
+  
+    <!-- 콘텐츠 스크립트 -->
+    <script src="./script/main.js"></script>
+  
+</head>
+<body>
+  <div id="wrap">
+
+<!-- 헤더, 인트로 -->
+    <header class="intro">
+      <!-- <video muted autoplay>
+        <source src="./movie/Glitch_1.mp4" type="video/mp4">
+      </video> -->
+      <canvas id="noise" class="noise"></canvas>
+
+      <div class="h_inner">
+        <div class="title">
+          <span>화면 자동 조정</span>
+          <h1>Woo Ye-ji</h1>
+        </div><!--//.title-->
+
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 100">
+          <defs>
+            <filter id="filter">
+                <feFlood flood-color="black" result="black" />
+                <feFlood flood-color="red" result="flood1" />
+                <feFlood flood-color="limegreen" result="flood2" />
+              <feOffset in="SourceGraphic" dx="3" dy="0" result="off1a"/>
+              <feOffset in="SourceGraphic" dx="2" dy="0" result="off1b"/>
+              <feOffset in="SourceGraphic" dx="-3" dy="0" result="off2a"/>
+              <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2b"/>
+                <feComposite in="flood1" in2="off1a" operator="in"  result="comp1" />
+                <feComposite in="flood2" in2="off2a" operator="in" result="comp2" />
+      
+                <feMerge x="0" width="100%" result="merge1">
+                <feMergeNode in = "black" />
+                <feMergeNode in = "comp1" />
+                <feMergeNode in = "off1b" />
+      
+                <animate 
+                  attributeName="y" 
+                    id = "y"
+                    dur ="4s"
+                    
+                    values = '104px; 104px; 30px; 105px; 30px; 2px; 2px; 50px; 40px; 105px; 105px; 20px; 6ßpx; 40px; 104px; 40px; 70px; 10px; 30px; 104px; 102px'
+      
+                    keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+      
+                    repeatCount = "indefinite" />
+        
+                <animate attributeName="height" 
+                    id = "h" 
+                    dur ="4s" 
+                    
+                    values = '10px; 0px; 10px; 30px; 50px; 0px; 10px; 0px; 0px; 0px; 10px; 50px; 40px; 0px; 0px; 0px; 40px; 30px; 10px; 0px; 50px'
+      
+                    keyTimes = '0; 0.362; 0.368; 0.421; 0.440; 0.477; 0.518; 0.564; 0.593; 0.613; 0.644; 0.693; 0.721; 0.736; 0.772; 0.818; 0.844; 0.894; 0.925; 0.939; 1'
+      
+                    repeatCount = "indefinite" />
+                </feMerge>
+              
+      
+              <feMerge x="0" width="100%" y="60px" height="65px" result="merge2">
+                <feMergeNode in = "black" />
+                <feMergeNode in = "comp2" />
+                <feMergeNode in = "off2b" />
+      
+                <animate attributeName="y" 
+                    id = "y"
+                    dur ="4s"
+                    values = '103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;' 
+      
+                    keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1'
+      
+                    repeatCount = "indefinite" />
+        
+                <animate attributeName="height" 
+                    id = "h"
+                    dur = "4s"
+                  
+                  values = '0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px'
+      
+                    keyTimes = '0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513;  1'
+                    
+                    repeatCount = "indefinite" />
+                </feMerge>
+              
+              <feMerge>
+                <feMergeNode in="SourceGraphic" />	
+      
+                <feMergeNode in="merge1" /> 
+              <feMergeNode in="merge2" />
+      
+                </feMerge>
+              </filter>
+          </defs>
+      
+          <g>
+            <text x="0" y="100">portfolio
+          </g>
+        </svg>
+
+      <!-- 카운트 다운 -->
+        <span id="timer">8</span>
+        <svg class="moving-outline" width="50" height="50" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="226.5" cy="226.5" r="216.5" stroke="#FFF" stroke-width="20"/>
+        </svg>
+      </div><!--//.h_inner-->
+    </header>
+
+<!-- 메인 -->
+    <main>
+      <!-- 포트폴리오 -->
+      <section class="proflie pos">
+        <div class="profile_wrapper">
+          <h2 class="caption">Who am I</h2>
+          <p>함께 가는 웹퍼블리셔가 되겠습니다.</p>
+          <article class="profile_txt">
+            <ul>
+              <li>NAME : 우예지</li>
+              <li>AGE: 92.11.05</li>
+              <li>EDUCATION: UI/UX웹디자인 & 퍼블리셔 과정 수료</a></li>
+              <li>CERTIFICATE</li>
+              <li>SKILLS</li>
+            </ul> 
+            <div class="edu_txt">
+              <p>&middot; 그린컴퓨터아트학원</p>
+              <p>&middot; 2014~2022년 어린이집 교사 재직</p>
+            </div>
+            <div class="certi_txt">
+              <p>&middot; 웹 디자인 기능사</p>
+              <p>&middot; GTQ 포토샵 1급</p>
+            </div>
+          </article>
+
+          <article class="skills">
+            <div class="chartBarsWrap">
+              <div class="chartBars chartBars2"> 
+                  <ul class="numbers">
+                      <li><span>100%</span></li>
+                      <li><span>80%</span></li>
+                      <li><span>60%</span></li>
+                      <li><span>40%</span></li>   
+                      <li><span>20%</span></li> 
+                      <li><span>0%</span></li>
+                  </ul>
+                  <ul class="bars">
+                      <li>
+                          <div data-percentage="90" class="bar trigger"></div><b>HTML</b>
+                      </li>
+                      <li> 
+                        <div data-percentage="90" class="bar trigger"></div><b>CSS</b>
+                      </li>
+                      <li>
+                        <div data-percentage="70" class="bar blueBar trigger"></div><b>jQuery</b>
+                      </li>
+                      <li>
+                        <div data-percentage="40" class="bar trigger"></div><b>Javascript</b>
+                      </li>
+                      <li>
+                        <div data-percentage="70" class="bar trigger"></div><b>Figma</b>
+                      </li>
+                      <li>
+                        <div data-percentage="80" class="bar trigger"></div><b>Photoshop</b>
+                      </li>
+                      <li>
+                        <div data-percentage="50" class="bar trigger"></div><b>Illustration</b>
+                      </li>
+                      <li>
+                        <div data-percentage="80" class="bar trigger"></div><b>Web Plan</b>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          </article>
+
+          <article class="profile_photo">
+            <img src="./images/profile_bg01.png" alt="프로필">
+            <img src="./images/profile_bg00001.png" alt="프로필">
+            <img src="./images/profile_bg03.png" alt="프로필">
+            <img src="./images/profile_bg04.png" alt="프로필">
+            <img src="./images/profile_bg05.png" alt="프로필">
+          </article>
+
+        </div><!--//.profile_wrapper-->
+      </section>
+
+      <!-- 퍼블리싱 -->
+      <section class="publishing">
+        <div class="publishing_wrapper">
+          <h2 class="caption">Publishing</h2>
+          <p>주제별 프로젝트를 기획부터 설계, 개발, 구현까지 각각 기간에 따라 구현을 하였습니다. </p>
+          <article class="pub_txt_wrap">
+            <div class="pub_tag">
+              <img src="./images/responsive.png" alt="반응형" class="reponsive">
+              <img src="./images/adaptive.png" alt="적응형" class="adaptive">
+              <img src="./images/onepage.png" alt="원페이지" class="one">
+            </div>
+          </article>
+
+          <div class="pub_photo pub_box01">
+            <div class="video">
+              <img src="./images/oh.png" alt="오키친">
+              <img src="./images/harim.png" alt="하림펫푸드">
+            </div>
+            <div class="film film01">
+              <ul class="flex">
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="film film02"> 
+              <ul class="flex">
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pub_photo pub_box02 hidden">
+            <div class="video">
+              <img src="./images/ayh.png" alt="시장하시죠">
+              <img src="./images/africa.png" alt="아프리카동물병원">
+            </div>
+            <div class="film film03">
+              <ul class="flex">
+                <li><a href="#"><img src="./images/ayh_film01.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/ayh_film02.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/ayh_film03.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/ayh_film04.png" alt=""></a></li>
+                <li><a href="#"><img src="./images/ayh_film05.png" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="film film04"> 
+              <ul class="flex">
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pub_photo pub_box03 hidden">
+            <div class="video">
+              <img src="./images/panda.png" alt="판다월드">
+              <img src="./images/casper.png" alt="캐스퍼">
+            </div>
+            <div class="film film05">
+              <ul class="flex">
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+              </ul>
+            </div>
+            <div class="film film06"> 
+              <ul class="flex">
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="camera">
+          <ul class="flex">
+            <li>WELLCOME TO MY PORTFOILO SITE.</li>
+            <li>WELLCOME TO MY PORTFOILO SITE.</li>
+            <li>WELLCOME TO MY PORTFOILO SITE.</li>
+            <li>WELLCOME TO MY PORTFOILO SITE.</li>
+          </ul>
+        </div>
+      </section>
+      <!-- 디자인 -->
+      <section class="design" >
+        <div class="design_wrapper">
+          <h2 class="caption">design</h2>
+          <p>주제별 프로젝트 페이지 부터 로고, 베너까지 디자인했습니다. </p>
+          <div class="design_txt">
+            <div class="expand explan01">
+              <p><strong>&check; 전통시장을 즐길 수 있는 ‘시장하시죠’</strong><br>각 지역에 있는 시장의 특색을 소개해주고 시장의 위치와  다양한 먹거리 정보를 제공함.</p>
+              <p><strong>&check; 소상공인을 위한 전통시장의 활성화</strong><br>‘전통시장을 활성화’시키기 위해 정부에서 많은 지원을 하고 있고, 
+                레트로 열풍이 불며 MZ세대가 지역 시장에 관심을 주기 시작함.
+                이러한 니즈를 반영하여 ‘전통시장에 관한 다양한 정보를 습득’하고, 
+                나아가 방문으로 이어질 수 있는 사이트를 제작.</p>
+            </div>
+            <div class="explan02">
+              <h4>&check; color concept</h4>
+              <p>친근한, 정다운, 포근한</p>
+              <ul class="flex">
+                <li><span></span><strong>main</strong>#D4E8E6</li>
+                <li><span></span><strong>point</strong>#492B23</li>
+                <li><span></span><strong>background</strong>#FEF9F3</li>
+              </ul>
+            </div>
+
+            <div class="explan03"></div>
+          </div>
+
+          <div class="design_photo">
+            <ul>
+              <li><a href="#"><img src="./images/design_ayh_big.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_museumgo_big.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_oh_big.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_panta_big.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_patten_big.png" alt=""></a></li>
+              <li><a href="#"><img src="" alt=""></a></li>
+              <li><a href="#"><img src="" alt=""></a></li>
+              <li><a href="#"><img src="" alt=""></a></li>
+              <li><a href="#"><img src="" alt=""></a></li>
+            </ul>
+          </div>
+          <div class="design_film flex">
+            <ul class="des_film01">
+              <li><a href="#"><img src="./images/ayh_logo_mokup.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_ayh.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_oh.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/ux_ui01.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/ux_ui02.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/museumgo_logo_mokup.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_museumgo.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_oh.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_panta.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_patten.png" alt=""></a></li>
+            </ul>
+
+            <ul class="des_film02">
+              <li><a href="#"><img src="./images/ayh_logo_mokup.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_ayh.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_oh.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/ux_ui01.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/ux_ui02.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/museumgo_logo_mokup.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_museumgo.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_oh.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_panta.png" alt=""></a></li>
+              <li><a href="#"><img src="./images/design_patten.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 그 외 -->
+      <section class="work">
+        <div class="work_wrapper">
+
+        </div>
+      </section>
+
+      <!-- 연락처 -->
+      <section class="contact">
+        <div class="contact_wrapper">
+
+        </div>
+      </section>
+    </main>
+
+    <!-- 네비게이션 -->
+    <aside class="aside">
+      <nav class="gnb">
+        <ul>
+          <li><a href="#" title="프로필">PROFILE</a></li>
+          <li><a href="#" title="퍼플리싱">PUBLISHING</a></li>
+          <li><a href="#" title="디자인">UI/UX DESIGN</a></li>
+          <li><a href="#" title="기타 작업 결과물">PROCESS</a></li>
+          <li><a href="#" title="연락방법">CONTACT US</a></li>
+        </ul>
+        <span></span>
+        </nav>
+    </aside>
+
+  <!-- 푸터 -->
+    <!-- <footer>
+      <p>본 사이트는 크롬, 사파리, 파이어폭스, 오페라, ms-edge 브라우저 1920px 해상도에 최적화 되어있습니다. <br>또한, 상업적 용도가 아닌 개인 포트폴리오 용으로 제작되어 일부 이미지, 영상, 폰트 등은 그 출처가 따로 있음은 밝힙니다.</p>
+      <address>Copyright</address>
+    </footer> -->
+  </div><!--//#wrap-->
+</body>
+</html> 

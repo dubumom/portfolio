@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/*  인트로 영상 서식 */
+
+header {
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+  /* display:none; */
+}
+/* video {
+  width: 100vw; height: 100vh;
+  position: relative; z-index: -1;
+} */
+.info {
+  color: white;
+  font:1em/1 Rubik+Glitch;
+  text-align: center;
+
+}
+
+.info a{
+  color: white;
+}
+  /* 큰 타이틀 효과 */
+#Ebene_1{
+  width: 1100px;
+  height: 120px;
+  display: block;
+  position: relative; left: 500px; top: 450px;
+  /* z-index: 10; */
+  transform: translate(-50%, -50%);
+  overflow: hidden; 
+  margin: 0 auto;
+  background: black;
+}
+
+text {
+filter: url(#filter);
+fill: white;
+font-family: 'Rubik Glitch';
+font-size: 150px;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+    /* 세부 타이틀 효과 */
+.title span, .title h1, #timer, .moving-outline{
+  position: absolute;
+}
+
+.title span {
+  left: 150px; top: 50px;
+  z-index: 10;
+  font-family: PFStardust;
+  font-size: 30px;
+}
+.title h1 {
+  z-index: 2;
+  left: 350px; top: 290px;
+  font-family: 'Rubik Glitch';
+  font-size: 80px;
+}
+
+    /* 카운트 다운 서식 */
+#timer {
+  left: 50%; bottom: 10px;
+  transform: translateY(-50%);
+  display: block;
+  width: 50px; height: 50px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+.moving-outline {
+  left: 50%; bottom: 10px;
+  transform: translateY(-50%);
+}
+
+/* 네비게이션 서식*/
+.gnb {
+  position: fixed;
+  top: 50%; left: 10px;
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+.gnb> ul {}
+.gnb> ul> li {
+  line-height: 40px;
+}
+.gnb> ul> li::after {
+  display: block;
+  content: '';
+  width: 0px; height: 0px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  transition: all 1s;
+}
+
+.gnb> ul> li> a {
+  display: block;
+  font-size: 16px;
+  text-align: right;
+}
+.gnb> ul> li:hover::after{
+  width: 100%; height: 2px;
+}
+.gnb span {
+  display: block;
+  position: absolute; top: -500px; left: 120px;
+  width: 1px; height: 1200px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* .profile, .publishing, .design, .work, .contact {
+  width: 100vw; height: 100vh;
+} */
+
+/* 메인의 wrapper 서식 */
+.profile_wrapper {
+  width: 1300px; height: 800px;
+  margin: 50px auto;
+  border: 1px solid #ff0;
+}
+.publishing_wrapper, .design_wrapper, .work_wrapper, .contact_wrapper {
+  width: 1300px; height: 800px;
+  margin: 0 auto;
+  padding-top: 50px;
+  border: 1px solid #ff0;
+}
