@@ -119,11 +119,11 @@ font-size: 150px;
 .profile_wrapper {
   width: 1300px; height: 800px;
   margin: 50px auto;
-  border: 1px solid #ff0;
+  /* border: 1px solid #ff0; */
 }
 .publishing_wrapper, .design_wrapper, .work_wrapper, .contact_wrapper {
   width: 1300px; height: 800px;
   margin: 0 auto;
   padding-top: 50px;
-  border: 1px solid #ff0;
+  /* border: 1px solid #ff0; */
 }
