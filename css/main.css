@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-
-
-
 /* 프로필  서식*/
 .profile  {
   position: relative;
@@ -22,9 +19,7 @@
 .profile_photo img:nth-child(4) {top: 225px;}
 .profile_photo img:last-child {top: 175px;} */
 
-.on{
-  transform:rotate(25deg) !important;
-}
+.on {transform:rotate(25deg) !important;}
 
     /* 프로필 - 텍스트 */
 
@@ -270,15 +265,18 @@ main .publishing {}
 /* 디자인 서식 */
 main .design {overflow: hidden;}
 main .design_wrapper {position: relative;}
-
-.design_caption> img {
-  position: absolute;
-  top: 250px;
-  z-index: -2;
-}
 .design_caption> ul> li {
-  position: absolute; top: 245px;
-  z-index: -1;
+  position: absolute; left: 133px; top: 303px;
+  font-size: 30px;
+}
+
+.design_wrapper> article {
+  position: absolute; left: 10px; top: 265px;
+}
+.sportright {
+  width: 300px; height: 100px;
+  background-image: url(../images/sportright.png);
+  background-repeat: no-repeat;
 }
 
     /* 디자인 - 설명 */
@@ -290,7 +288,9 @@ main .design_wrapper {position: relative;}
   border-bottom: 1px solid rgba(255,255,255,0.7);
   height: calc(100% / 3);
 }
+
     /* 디자인 - 설명: 소개, 목적 */
+
 .design_txt {
   position: absolute;
   left: 692px; top: 205px;
@@ -357,8 +357,30 @@ main .design_wrapper {position: relative;}
 
     /* 디자인 - 설명: 사용툴 */
 
+.explan03> article p {
+  text-indent: 15px;
+  padding: 5px;
+  padding-bottom: 15px;
+}
+.explan03> article> ul {
+  justify-content: space-around;
+  align-items: center;
+}
+.explan03> article> ul li {
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}   
+.explan03> article> ul> li img {
+  width: 40px;
+}
+.explan03> article> ul> li span {
+  display: block;
+  text-align: center;
+}
 
     /* 디자인 - 포토(큰 목업) */
+
 .design_photo {
   width: 675px;
   height: 645px;
@@ -407,5 +429,59 @@ main .design_wrapper {position: relative;}
 
 /* 기타 작업물 서식 */
 main .work {background: paleturquoise; }
+
+
 /* 연락처 서식 */
-main .contact {background: palevioletred;}
+main .contact {position: relative;}
+
+    /* 연락처 - 폼 */
+
+form {
+  width: 900px; height: 400px;
+  background-image: url(../images/Frame\ 77.png);
+  background-size: cover;
+  position: absolute; bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+fieldset {
+  padding-top: 45px;
+}
+fieldset legend {
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  font-family: "glitch";
+  padding-top: 20px;
+}
+fieldset p {
+  padding: 5px 30px;
+}
+input {
+  width: 200px; height: 30px;
+}
+textarea {
+  width: 400px; height: 70px;
+}
+
+    /* 연락처 - lp */
+.lp img {transition: 1s;}
+.lp img:first-child {
+  width: 800px;
+  position: absolute; left: 27%; top: 30%;
+  z-index: 1;
+  transform-origin: 50% 50%;
+  animation: lp 6s linear infinite;
+}
+.lp img:last-child {
+  width: 800px;
+  position: absolute; left: 27%; top: 30%;
+  z-index: 2;
+}
+
+@keyframes lp {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
+}
+
+

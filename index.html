@@ -235,13 +235,14 @@
           <h2 class="caption">Publishing</h2>
           <p>주제별 프로젝트를 기획부터 설계, 개발, 구현까지 각각 기간에 따라 구현을 하였습니다. </p>
           <article class="pub_txt_wrap">
+            <!-- 퍼블리싱 제목 -->
             <div class="pub_tag">
-              <img src="./images/responsive_hover.png" alt="반응형" class="reponsive pub_tag_on">
+              <img src="./images/responsive_hover.png" alt="반응형" class="responsive pub_tag_on">
               <img src="./images/adaptive.png" alt="적응형" class="adaptive">
               <img src="./images/onepage.png" alt="원페이지" class="one">
             </div>
           </article>
-
+            
           <div class="pub_photo pub_box01">
             <div class="video">
               <a href="https://dubumom.github.io/Okichin/"  target="_blank"><img src="./images/oh.png" alt="오키친"></a>
@@ -329,17 +330,22 @@
         <div class="design_wrapper">
           <h2 class="caption">design</h2>
           <p>주제별 프로젝트 페이지 부터 로고, 베너까지 디자인했습니다. </p>
+
+          <article class="flex">
+            <img src="./images/caption.png" alt="">
+            <div class="sportright"></div>
+          </article>
+
           <div class="design_caption">
-            <img src="./images/postit.png" alt="caption">
             <ul>
-              <li>웹페이지: 시장하시죠</li>
-              <li>모바일: 뮤지엄고</li>
-              <li>반응형: 오키친</li>
-              <li>웹페이지: 판다월드</li>
-              <li>로고: 시장하시죠</li>
-              <li>로고: 뮤지엄고</li>
-              <li>UI/UX: 아이폰11pro</li>
-              <li>배너: 패턴콜라보</li>
+              <li>Web: 시장하시죠</li>
+              <li class="hidden">Mobile: 뮤지엄고</li>
+              <li class="hidden">Responsive: 오키친</li>
+              <li class="hidden">Web: 판다월드</li>
+              <li class="hidden">Logo: 시장하시죠</li>
+              <li class="hidden">Logo: 뮤지엄고</li>
+              <li class="hidden">UI/UX: 아이폰11pro</li>
+              <li class="hidden">Banner: 패턴콜라보</li>
             </ul>
           </div>
           <div class="design_txt">
@@ -360,19 +366,23 @@
               </ul>
             </div>
 
-            <!-- <div class="explan03">
-              <dl>
-                <dt>Contribution</dt>
-                <dd>웹 페이지 제작 100%</dd>
-              </dl>
-              <dl>
-                <dt>used tools</dt>
-                <dd><img src="./images/vscode.svg" alt="vscode">웹문서 제작:html,css,Javascript, jQuery</dd>
-                <dd><img src="./images/figma.svg" alt="figma">디자인 관련 작업</dd>
-                <dd><img src="./images/photoshop.svg" alt="photoshop">사진보정, 목업작업</dd>
-                <dd><img src="./images/illustrator.svg" alt="illustrator">로고, 베너작업</dd>
-              </dl>
-            </div> -->
+            <div class="explan03">
+              <article>
+                <h4 class="h4">&check;  Contribution</h4>
+                <p>pc 디자인 100%, 로고 디자인 50%</p>
+              </article>
+
+              <article>
+                <h4 class="h4">&check;  used tools</h4>
+                <ul class="flex">
+                  <li class="flex"><img src="./images/vscode.svg" alt="vscode"><span>웹 문서 작성</span></li>
+                  <li class="flex"><img src="./images/figma.svg" alt="figma"><span>디자인 관련</span></li>
+                  <li class="flex"><img src="./images/photoshop.svg" alt="photoshop"><span>사진보정, 목업</span></li>
+                  <li class="flex"><img src="./images/illustrator.svg" alt="Illustration"><span>로고, 배너</span></li>
+                </ul>
+              </article>
+              
+            </div>
             
           </div>
 
@@ -429,7 +439,38 @@
       <!-- 연락처 -->
       <section class="contact">
         <div class="contact_wrapper">
-
+          <div class="con_box">
+            <form name="온라인 문의" method="post" action="send.php">
+              <fieldset>
+                <legend>contact</legend>
+                <p class="field">
+                  <input type="text" name="subject" id="subject" placeholder="[입사제안]" required> <!--required : 필수 입력-->
+                </p>
+          
+                <p class="field">
+                  <input type="text" name="name" id="name" placeholder="회사명/이름" required>
+                </p>
+          
+                <p class="field">
+                  <input type="text" name="email" id="email" placeholder="id@gmail.com" required>
+                </p>
+          
+                <p class="field">
+                  <textarea type="text" name="message" id="message" row="3" placeholder="내용" required></textarea>
+                </p>
+          
+                <p>
+                  <input type="submit" value="send">
+                  <input type="reset" value="back">
+                </p>
+              </fieldset>
+            </form>
+          </div>
+          
+          <div class="lp">
+            <img src="./images/LP.png" alt="lp">
+            <img src="./images/LP-img.png" alt="me">
+          </div>
         </div>
       </section>
     </main>
@@ -448,6 +489,14 @@
         </nav>
     </aside>
 
+    <aside class="modal">
+      <img src="./images/modal.png" alt="modal">
+      <p>
+        <input type="checkbox" id="ch">
+        <label for="ch">오늘 하루 열지 않음</label>
+        <input type="button" value="닫기" id="c_btn">
+      </p>
+    </aside>
   <!-- 푸터 -->
     <!-- <footer>
       <p>본 사이트는 크롬, 사파리, 파이어폭스, 오페라, ms-edge 브라우저 1920px 해상도에 최적화 되어있습니다. <br>또한, 상업적 용도가 아닌 개인 포트폴리오 용으로 제작되어 일부 이미지, 영상, 폰트 등은 그 출처가 따로 있음은 밝힙니다.</p>

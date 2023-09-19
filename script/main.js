@@ -48,19 +48,13 @@
       $('.aside').show();
     }
 
+    $('.modal').hide();
+    setTimeout(show03, 9100);
+    function show03(){
+      $('.modal').show();
+    }
+
     $('main section:first-child').delay(8600).animate({bottom:0},1000);
-
-    //네비게이션 클릭 시 섹션 이동
-    let gnb = $('.gnb li');
-
-    gnb.click(function(){
-      let i = $(this).index();
-      console.log(i); //2,3,4,5,6
-  
-      $('html, body').animate({scrollTop:$('main section').eq(i).offset().top-1},400, 'easeOutCubic');
-      return false;
-    });
-
 
     // 프로필 - 스킬 그래프 효과
 
@@ -121,48 +115,6 @@
       $('.profile_photo img:last-child').animate({top:'175px'});
     }
     
-    //휠 이벤트
-    window.onload = function () {
-      var elm = $('section');
-      $(elm).each(function (index) {
-          // 개별적으로 Wheel 이벤트 적용
-          $(this).on("mousewheel DOMMouseScroll", function (e) {
-              e.preventDefault();
-              var delta = 0;
-              if (!event) event = window.event;
-              if (event.wheelDelta) {
-                  delta = event.wheelDelta / 120;
-                  if (window.opera) delta = -delta;
-              } 
-              else if (event.detail)
-                  delta = -event.detail / 3;
-              var moveTop = $(window).scrollTop();
-              var elmSelecter = $(elm).eq(index);
-              // 마우스휠을 위에서 아래로
-              if (delta < 0) {
-                  if ($(elmSelecter).next() != undefined) {
-                      try{
-                          moveTop = $(elmSelecter).next().offset().top;
-                      }catch(e){}
-                  }
-              // 마우스휠을 아래에서 위로
-              } else {
-                  if ($(elmSelecter).prev() != undefined) {
-                      try{
-                          moveTop = $(elmSelecter).prev().offset().top;
-                      }catch(e){}
-                  }
-              }
-              // 화면 이동 0.3초(300)
-              $("html,body").stop().animate({
-                  scrollTop: moveTop + 'px'
-              }, {
-                  duration: 300, complete: function () {
-                  }
-              });
-          });
-      });
-  }
 
   //퍼플리싱 - 무한슬라이드
 
@@ -193,7 +145,7 @@
 
     // 퍼블리싱 - 제목 클릭 시 이미지 변경
     function changeImg(){
-      $('.reponsive').attr("src", "./images/responsive_hover.png");
+      $('.reponsive').attr("src", "./images/responsive.png");
       $('.adaptive').attr("src","./images/adaptive_hover.png");
       $('.one').attr("src","./images/onepage_hover.png");
     }
@@ -276,6 +228,14 @@
       let Timer02 = setInterval(moveTop, 60);
   
       //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
+      $('.design_film> .des_film01').hover(function(){
+        clearInterval(Timer02);
+      },function(){
+        clearInterval(Timer02);
+        Timer02 = setInterval(moveTop,60);
+      });
+
+      //아래로 
 
       let dBottom = -230;
 
@@ -302,7 +262,12 @@
         Timer03 = setInterval(moveBottom,60);
       });
 
-
+      $('.lp img:last-child').mouseenter(function(){
+        $('.lp img').css('top','15%');
+      });
+      $('.lp img:last-child').mouseleave(function(){
+        $('.lp img').css('top','30%');
+      });
 
 
 
