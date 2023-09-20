@@ -76,7 +76,7 @@
         ){
           $(this).each(function(key, bar){
             var percentage = $(this).data("percentage");
-            $(this).css("height",percentage + "%");
+            $(this).css("height",percentage + "px");
 
             $(this).prop("Counter", 0).animate(
               {
@@ -120,8 +120,8 @@
 
     let mleft = -230;
 
-    function moveLeft(){
-      $('.pub_photo > .film > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
+    function moveLeft01(){
+      $('.pub_photo > .film01 > ul').animate({'margin-left':mleft},60); /*-230 씩 이동하기*/
       mleft-=2;
 
       // console.log(mleft);
@@ -133,14 +133,119 @@
       }
     };
 
-    let Timer01 = setInterval(moveLeft, 20);
+    let Timer01 = setInterval(moveLeft01, 20);
 
     //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film  ul').hover(function(){
+    $('.pub_photo > .film01').hover(function(){
       clearInterval(Timer01);
     },function(){
       clearInterval(Timer01);
-      Timer01 = setInterval(moveLeft,20);
+      Timer01 = setInterval(moveLeft01,20);
+    });
+
+    function moveLeft02(){
+      $('.pub_photo > .film02 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
+      mleft-=2;
+
+      if(mleft==-232){
+        $('.pub_photo > .film02 > ul > li:first-child').insertAfter('.pub_photo > .film02 > ul li:last-child');
+      }else if(mleft==-460){
+        mleft=-230;
+      }
+    };
+
+    let Timer04 = setInterval(moveLeft02, 20);
+
+    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
+    $('.pub_photo > .film02').hover(function(){
+      clearInterval(Timer04);
+    },function(){
+      clearInterval(Timer04);
+      Timer04 = setInterval(moveLeft02,20);
+    });
+
+    function moveLeft03(){
+      $('.pub_photo > .film03 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
+      mleft-=2;
+
+      if(mleft==-232){
+        $('.pub_photo > .film03 > ul > li:first-child').insertAfter('.pub_photo > .film03 > ul li:last-child');
+      }else if(mleft==-460){
+        mleft=-230;
+      }
+    };
+
+    let Timer05 = setInterval(moveLeft03, 20);
+
+    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
+    $('.pub_photo > .film03').hover(function(){
+      clearInterval(Timer05);
+    },function(){
+      clearInterval(Timer05);
+      Timer05 = setInterval(moveLeft03,20);
+    });
+
+    function moveLeft04(){
+      $('.pub_photo > .film04 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
+      mleft-=2;
+
+      if(mleft==-232){
+        $('.pub_photo > .film04 > ul > li:first-child').insertAfter('.pub_photo > .film04 > ul li:last-child');
+      }else if(mleft==-460){
+        mleft=-230;
+      }
+    };
+
+    let Timer06 = setInterval(moveLeft04, 20);
+
+    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
+    $('.pub_photo > .film01').hover(function(){
+      clearInterval(Timer06);
+    },function(){
+      clearInterval(Timer06);
+      Timer06 = setInterval(moveLeft04,20);
+    });
+
+    function moveLeft05(){
+      $('.pub_photo > .film05 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
+      mleft-=2;
+
+      if(mleft==-232){
+        $('.pub_photo > .film05 > ul > li:first-child').insertAfter('.pub_photo > .film05 > ul li:last-child');
+      }else if(mleft==-460){
+        mleft=-230;
+      }
+    };
+
+    let Timer07 = setInterval(moveLeft05, 20);
+
+    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
+    $('.pub_photo > .film05').hover(function(){
+      clearInterval(Timer07);
+    },function(){
+      clearInterval(Timer07);
+      Timer07 = setInterval(moveLeft05,20);
+    });
+
+    function moveLeft06(){
+      $('.pub_photo > .film06 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
+      mleft-=2;
+
+      if(mleft==-232){
+        $('.pub_photo > .film06 > ul > li:first-child').insertAfter('.pub_photo > .film06 > ul li:last-child');
+      }else if(mleft==-460){
+        mleft=-230;
+      }
+    };
+
+    let Timer08 = setInterval(moveLeft06, 20);
+
+    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
+    $('.pub_photo > .film06').hover(function(){
+      clearInterval(Timer08);
+    },function(){
+      clearInterval(Timer08);
+      Timer08 = setInterval(moveLeft06,20);
     });
 
     // 퍼블리싱 - 제목 클릭 시 이미지 변경
@@ -243,7 +348,7 @@
 
         $('.design_film> .des_film02').css('margin-bottom',dBottom);
         dBottom -= 2; 
-        console.log(dBottom);
+        // console.log(dBottom);
   
         if(dBottom == -232){
         $('.design_film> .des_film02> li:last-child').insertBefore('.design_film> .des_film02 li:first-child');
@@ -269,7 +374,19 @@
         $('.lp img').css('top','30%');
       });
 
+      // 스크롤 이벤트
 
+      $(window).scroll(function(){
+        let sPos = Math.ceil(($(this).scrollTop()/$(this).height())*100);
+        console.log(sPos);
+
+        if(sPos>90 && sPos<=100) {
+          // alert('확인');
+          $('.line02').stop().animate({'width':'485px'},1000);
+        } else {
+          $('.line02').stop().animate({'width':'0px'},1000);
+        }
+      });
 
   
     }); 

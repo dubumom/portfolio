@@ -86,6 +86,7 @@ font-size: 150px;
 .gnb> ul {}
 .gnb> ul> li {
   line-height: 40px;
+  border-bottom: 2px solid linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 50%, rgba(0,0,0,1) 100%);
 }
 .gnb> ul> li::after {
   display: block;
@@ -117,11 +118,14 @@ font-size: 150px;
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* .profile, .publishing, .design, .work, .contact {
-  width: 100vw; height: 100vh;
-} */
 
-/* 메인의 wrapper 서식 */
+/* 메인 section 공통 서식 */
+.profile, .publishing, .design, .work, .contact {
+  width: 100vw; height: 100vh;
+  overflow: hidden;
+}
+
+/* 메인의 wrapper  공통 서식 */
 .profile_wrapper {
   width: 1300px; height: 800px;
   margin: 50px auto;

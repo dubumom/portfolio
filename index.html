@@ -34,14 +34,16 @@
     <!-- 제이쿼리 쿠키파일 -->
     <script src="./script/jquery.cookie.js"></script>
   
-  <!-- 노이즈 효과 -->
+    <!-- 노이즈 효과 -->
     <script src="./script/noise.js"></script>
 
-    <!-- 제이쿼리 공통 스크립트 -->
-    <script src="./script/layout.js"></script>
+
   
     <!-- 콘텐츠 스크립트 -->
     <script src="./script/main.js"></script>
+
+    <!-- 제이쿼리 공통 스크립트 -->
+    <script src="./script/layout.js"></script>
   
 </head>
 <body>
@@ -155,12 +157,15 @@
       <section class="proflie pos">
         <div class="profile_wrapper">
           <h2 class="caption">Who am I</h2>
-          <p>함께 가는 웹퍼블리셔가 되겠습니다.</p>
+
+          <span class="underline line01"></span>
+          <p> 함께하는 즐거움을 알며, 나아가는 미래를 위해 항상 공부하는 퍼블리셔 </p>
+
           <article class="profile_txt">
             <ul>
               <li>NAME : 우예지</li>
               <li>AGE: 92.11.05</li>
-              <li>EDUCATION: UI/UX웹디자인 & 퍼블리셔 과정 수료</a></li>
+              <li>EDUCATION: UI/UX웹디자인 & 웹퍼블리셔(코딩) 개발자</li>
               <li>CERTIFICATE</li>
               <li>SKILLS</li>
             </ul> 
@@ -168,7 +173,9 @@
               <p>&middot; 사회성을 두루 갖춘 ISTP</p>
             </div>
             <div class="edu_txt">
-              <p>&middot; 그린컴퓨터아트학원</p>
+              <p>&middot; 디지털 제고를 위한 다이나믹 클라이언트 사이트 스크립트 기초</p>
+              <p>&middot; 피그마(Figma) UI/UX 웹&앱 디자이너를 위한 실무활용</p>
+              <p>&middot; 웹퍼블리셔 프론트엔드(웹표준, HTML, CSS, 반응형웹디자인) </p>
               <p>&middot; 2014~2022년 어린이집 교사 재직</p>
             </div>
             <div class="certi_txt">
@@ -182,33 +189,30 @@
               <div class="chartBars chartBars2"> 
                   <ul class="numbers">
                       <li><span>100%</span></li>
-                      <li><span>80%</span></li>
-                      <li><span>60%</span></li>
-                      <li><span>40%</span></li>   
-                      <li><span>20%</span></li> 
+                      <li><span>50%</span></li>
                       <li><span>0%</span></li>
                   </ul>
                   <ul class="bars">
                       <li>
-                          <div data-percentage="90" class="bar trigger"></div><b>HTML</b>
+                          <div data-percentage="95" class="bar trigger"></div><b>HTML</b>
                       </li>
                       <li> 
-                        <div data-percentage="90" class="bar trigger"></div><b>CSS</b>
+                        <div data-percentage="95" class="bar trigger"></div><b>CSS</b>
                       </li>
                       <li>
-                        <div data-percentage="70" class="bar blueBar trigger"></div><b>jQuery</b>
+                        <div data-percentage="80" class="bar blueBar trigger"></div><b>jQuery</b>
                       </li>
                       <li>
-                        <div data-percentage="40" class="bar trigger"></div><b>Javascript</b>
+                        <div data-percentage="70" class="bar trigger"></div><b>Javascript</b>
                       </li>
                       <li>
-                        <div data-percentage="70" class="bar trigger"></div><b>Figma</b>
+                        <div data-percentage="80" class="bar trigger"></div><b>Figma</b>
                       </li>
                       <li>
                         <div data-percentage="80" class="bar trigger"></div><b>Photoshop</b>
                       </li>
                       <li>
-                        <div data-percentage="50" class="bar trigger"></div><b>Illustration</b>
+                        <div data-percentage="70" class="bar trigger"></div><b>Illustration</b>
                       </li>
                       <li>
                         <div data-percentage="80" class="bar trigger"></div><b>Web Plan</b>
@@ -233,7 +237,9 @@
       <section class="publishing">
         <div class="publishing_wrapper">
           <h2 class="caption">Publishing</h2>
+          <span class="underline line02"></span>
           <p>주제별 프로젝트를 기획부터 설계, 개발, 구현까지 각각 기간에 따라 구현을 하였습니다. </p>
+
           <article class="pub_txt_wrap">
             <!-- 퍼블리싱 제목 -->
             <div class="pub_tag">
@@ -442,7 +448,7 @@
           <div class="con_box">
             <form name="온라인 문의" method="post" action="send.php">
               <fieldset>
-                <legend>contact</legend>
+                <legend>Contact Us</legend>
                 <p class="field">
                   <input type="text" name="subject" id="subject" placeholder="[입사제안]" required> <!--required : 필수 입력-->
                 </p>
@@ -489,6 +495,7 @@
         </nav>
     </aside>
 
+    <!-- 모달 -->
     <aside class="modal">
       <img src="./images/modal.png" alt="modal">
       <p>
@@ -497,11 +504,7 @@
         <input type="button" value="닫기" id="c_btn">
       </p>
     </aside>
-  <!-- 푸터 -->
-    <!-- <footer>
-      <p>본 사이트는 크롬, 사파리, 파이어폭스, 오페라, ms-edge 브라우저 1920px 해상도에 최적화 되어있습니다. <br>또한, 상업적 용도가 아닌 개인 포트폴리오 용으로 제작되어 일부 이미지, 영상, 폰트 등은 그 출처가 따로 있음은 밝힙니다.</p>
-      <address>Copyright</address>
-    </footer> -->
+
   </div><!--//#wrap-->
 </body>
 </html> 

@@ -4,7 +4,7 @@ $(document).ready(function(){
     var $html =$('html');
     var page = 1;
     var lastPage = $('section').length;
-    console.log(lastPage);
+    //console.log(lastPage);
 
     $html.animate({scrollTop:0},10);
 
@@ -29,6 +29,8 @@ $(document).ready(function(){
 
     //모달 서식
 
+    const ch=$('#ch');
+
     $('#c_btn').click(function(){
       $('.modal').hide();
     });
@@ -39,7 +41,7 @@ $(document).ready(function(){
   
     function closeModal(){
       if(ch.is(':checked')){
-        $.cookie('popup','none',{expires:1,path:'/'});
+        $.cookie('popup','none',{expires:5,path:'/'});
       }
       $('.modal').hide();
     }
