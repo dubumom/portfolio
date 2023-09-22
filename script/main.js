@@ -7,54 +7,36 @@
       $('.title span').delay(200).fadeOut();
       $('.title span').delay(300).fadeIn();
       $('.title span').delay(400).fadeOut();
-      $('.title span').delay(500).fadeIn();
-      $('.title span').delay(4500).fadeOut();    
 
-    $('svg, .title h1, #timer').css('opacity','0').delay(3500).animate({'opacity':'1'},300);
+      $('#Ebene_1, .open_img, .open_video').stop().hide();
 
-    // 5,4,3,2,1 카운트 다운 - 자바스크립트
-    timer=document.getElementById("timer");
-    startSecond="8";
-    setInterval("timer.innerHTML=startSecond;startSecond--;",1000);
+      $('.open_img').delay(2500).fadeIn();
+      $('.open_video').delay(2500).fadeIn();
+      $('.open_video').delay(2500).fadeOut();
 
-    const outline = document.querySelector(".moving-outline circle");
-    const outlineLength = outline.getTotalLength();
-    outline.style.strokeDasharray = outlineLength;
-    outline.style.strokeDashoffset = 0;
-
-    let duration = 60;
-    let elapsed = 0;
-    animate(elapsed);
-    function animate(offset) {
-      setTimeout(() => {
-        elapsed++;
-        if (elapsed > duration * 2) elapsed = 0;
-        animate((elapsed / duration) * outlineLength);
-      }, 10);
-      outline.style.strokeDashoffset = offset;
-    }
+      $('#Ebene_1').delay(6000).fadeIn();
 
     // 오프닝 후 메인 서식 올라오기
     $('main').hide();
 
-    setTimeout(show01, 8500);
+    setTimeout(show01, 8000);
     function show01() {
       $('main').show();
     }
 
     $('.aside').hide();
-    setTimeout(show02, 8900);
+    setTimeout(show02, 8000);
     function show02(){
-      $('.aside').show();
+      $('.aside').fadeIn();
     }
 
     $('.modal').hide();
-    setTimeout(show03, 9100);
+    setTimeout(show03, 8000);
     function show03(){
-      $('.modal').show();
+      $('.modal').fadeIn();
     }
 
-    $('main section:first-child').delay(8600).animate({bottom:0},1000);
+    $('main section:first-child').delay(8000).animate({bottom:0},1000);
 
     // 프로필 - 스킬 그래프 효과
 
@@ -116,149 +98,98 @@
     }
     
 
+    // 마우스 호버 시
+    $('.profile_photo').mouseenter(function(){
+      $('.profile_photo img').css('transform','rotate(50deg');
+      $('.profile_photo img:first-child').animate({top:'530px'});
+      $('.profile_photo img:nth-child(2)').animate({top:'350px'});
+      $('.profile_photo img:nth-child(2)').css('transform','rotate(0deg');
+      $('.profile_photo img:nth-child(3)').animate({top:'480px'});
+      $('.profile_photo img:nth-child(4)').animate({top:'150px'});
+      $('.profile_photo img:last-child').animate({top:'100px'});
+    });
+
+    $('.profile_photo').mouseleave(function(){
+      $('.profile_photo img').css('transform','rotate(35deg');
+      $('.profile_photo img:first-child').animate({top:'375px'});
+      $('.profile_photo img:nth-child(2)').animate({top:'325px'});
+      $('.profile_photo img:nth-child(3)').animate({top:'275px'});
+      $('.profile_photo img:nth-child(4)').animate({top:'225px'});
+      $('.profile_photo img:last-child').animate({top:'175px'});
+    });
+
+
+
   //퍼플리싱 - 무한슬라이드
 
-    let mleft = -230;
+    let mleft = -202;
 
     function moveLeft01(){
-      $('.pub_photo > .film01 > ul').animate({'margin-left':mleft},60); /*-230 씩 이동하기*/
-      mleft-=2;
+      $('.film01 > ul').css('margin-left',mleft); /*-202 씩 이동하기*/
+      mleft -= 2;
 
-      // console.log(mleft);
+      //console.log(mleft);
 
-      if(mleft==-232){
-        $('.pub_photo > .film01 > ul > li:first-child').insertAfter('.pub_photo > .film01 > ul li:last-child');
-      }else if(mleft==-460){
-        mleft=-230;
+      if(mleft == -204){
+        $('.film01> ul> li:first-child').insertAfter('.film01> ul> li:last-child');
+      }else if (mleft == -404){
+        mleft = -202;
       }
+
     };
 
-    let Timer01 = setInterval(moveLeft01, 20);
+    let Timer01 = setInterval(moveLeft01,100);
 
     //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film01').hover(function(){
+    $('.pub_box01 .film01').hover(function(){
       clearInterval(Timer01);
     },function(){
       clearInterval(Timer01);
-      Timer01 = setInterval(moveLeft01,20);
+      Timer01 = setInterval(moveLeft01,100);
     });
 
     function moveLeft02(){
-      $('.pub_photo > .film02 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
-      mleft-=2;
+      $('.film02 > ul').css('margin-left',mleft); /*-202 씩 이동하기*/
+      mleft -= 2;
 
-      if(mleft==-232){
-        $('.pub_photo > .film02 > ul > li:first-child').insertAfter('.pub_photo > .film02 > ul li:last-child');
-      }else if(mleft==-460){
-        mleft=-230;
+      //console.log(mleft);
+
+      if(mleft == -204){
+        $('.film02> ul> li:first-child').insertAfter('.film02> ul> li:last-child');
+      }else if (mleft == -404){
+        mleft = -202;
       }
+
     };
 
-    let Timer04 = setInterval(moveLeft02, 20);
+    let Timer04 = setInterval(moveLeft02,100);
 
     //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film02').hover(function(){
+    $('.pub_box01 .film02').hover(function(){
       clearInterval(Timer04);
     },function(){
       clearInterval(Timer04);
-      Timer04 = setInterval(moveLeft02,20);
+      Timer04 = setInterval(moveLeft02,100);
     });
 
-    function moveLeft03(){
-      $('.pub_photo > .film03 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
-      mleft-=2;
 
-      if(mleft==-232){
-        $('.pub_photo > .film03 > ul > li:first-child').insertAfter('.pub_photo > .film03 > ul li:last-child');
-      }else if(mleft==-460){
-        mleft=-230;
-      }
-    };
 
-    let Timer05 = setInterval(moveLeft03, 20);
 
-    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film03').hover(function(){
-      clearInterval(Timer05);
-    },function(){
-      clearInterval(Timer05);
-      Timer05 = setInterval(moveLeft03,20);
-    });
 
-    function moveLeft04(){
-      $('.pub_photo > .film04 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
-      mleft-=2;
-
-      if(mleft==-232){
-        $('.pub_photo > .film04 > ul > li:first-child').insertAfter('.pub_photo > .film04 > ul li:last-child');
-      }else if(mleft==-460){
-        mleft=-230;
-      }
-    };
-
-    let Timer06 = setInterval(moveLeft04, 20);
-
-    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film01').hover(function(){
-      clearInterval(Timer06);
-    },function(){
-      clearInterval(Timer06);
-      Timer06 = setInterval(moveLeft04,20);
-    });
-
-    function moveLeft05(){
-      $('.pub_photo > .film05 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
-      mleft-=2;
-
-      if(mleft==-232){
-        $('.pub_photo > .film05 > ul > li:first-child').insertAfter('.pub_photo > .film05 > ul li:last-child');
-      }else if(mleft==-460){
-        mleft=-230;
-      }
-    };
-
-    let Timer07 = setInterval(moveLeft05, 20);
-
-    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film05').hover(function(){
-      clearInterval(Timer07);
-    },function(){
-      clearInterval(Timer07);
-      Timer07 = setInterval(moveLeft05,20);
-    });
-
-    function moveLeft06(){
-      $('.pub_photo > .film06 > ul').animate({'margin-left':mleft},100); /*-230 씩 이동하기*/
-      mleft-=2;
-
-      if(mleft==-232){
-        $('.pub_photo > .film06 > ul > li:first-child').insertAfter('.pub_photo > .film06 > ul li:last-child');
-      }else if(mleft==-460){
-        mleft=-230;
-      }
-    };
-
-    let Timer08 = setInterval(moveLeft06, 20);
-
-    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
-    $('.pub_photo > .film06').hover(function(){
-      clearInterval(Timer08);
-    },function(){
-      clearInterval(Timer08);
-      Timer08 = setInterval(moveLeft06,20);
-    });
 
     // 퍼블리싱 - 제목 클릭 시 이미지 변경
     function changeImg(){
-      $('.reponsive').attr("src", "./images/responsive.png");
+      $('.responsive').attr("src", "./images/responsive.png");
       $('.adaptive').attr("src","./images/adaptive_hover.png");
       $('.one').attr("src","./images/onepage_hover.png");
     }
 
-    $('.reponsive').click(function(){
+        //반응형 클릭 시
+    $('.responsive').click(function(){
 
       //이미지 변경
       changeImg();
+      $('.responsive').attr("src","./images/responsive_hover.png");
       $('.adaptive').attr("src","./images/adaptive.png");
       $('.one').attr("src","./images/onepage.png");
 
@@ -271,15 +202,16 @@
       $('.pub_box01').removeClass('hidden');
     });
 
+        //적응형 클릭 시
     $('.adaptive').click(function(){
 
       //이미지 변경
       changeImg();
-      $('.reponsive').attr("src", "./images/responsive.png");
+      $('.responsive').attr("src", "./images/responsive.png");
       $('.one').attr("src","./images/onepage.png");
 
       $(this).css('margin-bottom','50px');
-      $('.reponsive').css('margin-bottom','0px');
+      $('.responsive').css('margin-bottom','0px');
       $('.one').css('margin-bottom','0px');
 
       //내용변경
@@ -287,14 +219,15 @@
       $('.pub_box02').removeClass('hidden');
     });
 
+        //원페이지 클릭 시
     $('.one').click(function(){
       //이미지 변경
       changeImg();
-      $('.reponsive').attr("src", "./images/responsive.png");
+      $('.responsive').attr("src", "./images/responsive.png");
       $('.adaptive').attr("src","./images/adaptive.png");
 
       $(this).css('margin-bottom','50px');
-      $('.reponsive').css('margin-bottom','0px');
+      $('.responsive').css('margin-bottom','0px');
       $('.adaptive').css('margin-bottom','0px');
 
       //내용변경
@@ -378,7 +311,7 @@
 
       $(window).scroll(function(){
         let sPos = Math.ceil(($(this).scrollTop()/$(this).height())*100);
-        console.log(sPos);
+        // console.log(sPos);
 
         if(sPos>90 && sPos<=100) {
           // alert('확인');
@@ -386,7 +319,13 @@
         } else {
           $('.line02').stop().animate({'width':'0px'},1000);
         }
-      });
 
-  
-    }); 
+
+      if(sPos==200) {
+        // alert('확인');
+        $('.sportright').stop().animate({'width':'300px'},2000);
+      } else {
+        $('.sportright').stop().animate({'width':'0px'},2000);
+      }
+    });
+  }); 

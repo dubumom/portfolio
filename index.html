@@ -51,16 +51,18 @@
 
 <!-- 헤더, 인트로 -->
     <header class="intro">
-      <!-- <video muted autoplay>
-        <source src="./movie/Glitch_1.mp4" type="video/mp4">
-      </video> -->
       <canvas id="noise" class="noise"></canvas>
 
       <div class="h_inner">
         <div class="title">
           <span>화면 자동 조정</span>
-          <h1>Woo Ye-ji</h1>
         </div><!--//.title-->
+
+        <img src="./images/opening_bg.png" alt="" class="open_img">
+
+        <video autoplay muted loop="infinite" class="open_video">
+          <source src="./movie/TV-noise-turn_on.mp4" type="video/mp4">
+        </video>
 
         <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 100">
           <defs>
@@ -142,12 +144,7 @@
             <text x="0" y="100">portfolio
           </g>
         </svg>
-
-      <!-- 카운트 다운 -->
-        <span id="timer">8</span>
-        <svg class="moving-outline" width="50" height="50" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="226.5" cy="226.5" r="216.5" stroke="#FFF" stroke-width="20"/>
-        </svg>
+        
       </div><!--//.h_inner-->
     </header>
 
@@ -224,7 +221,7 @@
 
           <article class="profile_photo">
             <img src="./images/profile_bg01.png" alt="프로필">
-            <img src="./images/profile_bg00001.png" alt="프로필">
+            <img src="./images/profile_bg00001.png" alt="프로필(얼굴)" class="face">
             <img src="./images/profile_bg03.png" alt="프로필">
             <img src="./images/profile_bg04.png" alt="프로필">
             <img src="./images/profile_bg05.png" alt="프로필">
@@ -265,6 +262,7 @@
             </div>
             <div class="film film02"> 
               <ul class="flex">
+                <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./images/image 15.jpg" alt=""></a></li>
                 <li><a href="#"><img src="./images/harim_film03.png" alt=""></a></li>
@@ -322,6 +320,7 @@
           </div>
 
         </div>
+
         <div class="camera">
           <ul class="flex">
             <li>WELLCOME TO MY PORTFOILO SITE.</li>
@@ -330,6 +329,7 @@
             <li>WELLCOME TO MY PORTFOILO SITE.</li>
           </ul>
         </div>
+        
       </section>
       <!-- 디자인 -->
       <section class="design" >
@@ -344,7 +344,7 @@
 
           <div class="design_caption">
             <ul>
-              <li>Web: 시장하시죠</li>
+              <li>WEB: 시장하시죠</li>
               <li class="hidden">Mobile: 뮤지엄고</li>
               <li class="hidden">Responsive: 오키친</li>
               <li class="hidden">Web: 판다월드</li>
@@ -462,7 +462,7 @@
                 </p>
           
                 <p class="field">
-                  <textarea type="text" name="message" id="message" row="3" placeholder="내용" required></textarea>
+                  <textarea  type="text" name="message" id="message" row="3" placeholder="내용" required></textarea>
                 </p>
           
                 <p>
