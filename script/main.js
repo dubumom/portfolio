@@ -12,7 +12,7 @@
 
       $('.open_img').delay(2500).fadeIn();
       $('.open_video').delay(2500).fadeIn();
-      $('.open_video').delay(2500).fadeOut();
+      $('.open_video').delay(3000).fadeOut();
 
       $('#Ebene_1').delay(6000).fadeIn();
 
@@ -31,7 +31,7 @@
     }
 
     $('.modal').hide();
-    setTimeout(show03, 8000);
+    setTimeout(show03, 9000);
     function show03(){
       $('.modal').fadeIn();
     }
@@ -90,32 +90,32 @@
     function rotate(){   
       
       $('.profile_photo img').css('transform','rotate(35deg');
-      $('.profile_photo img:first-child').animate({top:'375px'});
-      $('.profile_photo img:nth-child(2)').animate({top:'325px'});
-      $('.profile_photo img:nth-child(3)').animate({top:'275px'});
-      $('.profile_photo img:nth-child(4)').animate({top:'225px'});
-      $('.profile_photo img:last-child').animate({top:'175px'});
+      $('.profile_photo img:first-child').stop().animate({top:'375px'});
+      $('.profile_photo img:nth-child(2)').stop().animate({top:'325px'});
+      $('.profile_photo img:nth-child(3)').stop().animate({top:'275px'});
+      $('.profile_photo img:nth-child(4)').stop().animate({top:'225px'});
+      $('.profile_photo img:last-child').stop().animate({top:'175px'});
     }
     
 
     // 마우스 호버 시
     $('.profile_photo').mouseenter(function(){
       $('.profile_photo img').css('transform','rotate(50deg');
-      $('.profile_photo img:first-child').animate({top:'530px'});
-      $('.profile_photo img:nth-child(2)').animate({top:'350px'});
+      $('.profile_photo img:first-child').stop().animate({top:'530px'});
+      $('.profile_photo img:nth-child(2)').stop().animate({top:'350px'});
       $('.profile_photo img:nth-child(2)').css('transform','rotate(0deg');
-      $('.profile_photo img:nth-child(3)').animate({top:'480px'});
-      $('.profile_photo img:nth-child(4)').animate({top:'150px'});
-      $('.profile_photo img:last-child').animate({top:'100px'});
+      $('.profile_photo img:nth-child(3)').stop().animate({top:'480px'});
+      $('.profile_photo img:nth-child(4)').stop().animate({top:'150px'});
+      $('.profile_photo img:last-child').stop().animate({top:'100px'});
     });
 
     $('.profile_photo').mouseleave(function(){
       $('.profile_photo img').css('transform','rotate(35deg');
-      $('.profile_photo img:first-child').animate({top:'375px'});
-      $('.profile_photo img:nth-child(2)').animate({top:'325px'});
-      $('.profile_photo img:nth-child(3)').animate({top:'275px'});
-      $('.profile_photo img:nth-child(4)').animate({top:'225px'});
-      $('.profile_photo img:last-child').animate({top:'175px'});
+      $('.profile_photo img:first-child').stop().animate({top:'375px'});
+      $('.profile_photo img:nth-child(2)').stop().animate({top:'325px'});
+      $('.profile_photo img:nth-child(3)').stop().animate({top:'275px'});
+      $('.profile_photo img:nth-child(4)').stop().animate({top:'225px'});
+      $('.profile_photo img:last-child').stop().animate({top:'175px'});
     });
 
 

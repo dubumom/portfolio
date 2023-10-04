@@ -44,6 +44,7 @@ a {
 main section {
   width: 100vw; height: 100vh;
   background: #000;
+  overflow: hidden;
 }
 
 .pos {
@@ -60,7 +61,7 @@ main section {
 }
 
 .hidden {display: none;}
-.block {display: block;}
+.block {display: block !important;}
 .caption {
   font-family: 'glitch', cursive;
   font-size: 48px;

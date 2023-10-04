@@ -52,16 +52,41 @@ $(document).ready(function(){
 
     //네비게이션 클릭 시 섹션 이동
     let gnb = $('.gnb li');
+    let s_idx=0;
+
 
     gnb.click(function(){
-      let i = $(this).index();
-      //console.log(i); //2,3,4,5,6
-  
-      $('html, body').animate({scrollTop:$('main section').eq(i).offset().top-1},400, 'easeOutCubic');
+
+      $('.gnb a img').removeClass('block');
+      $(this).find('a img').addClass('block');
+
+      let index = $(this).index();
+      // console.log(index);
+      $('html, body').stop().animate({scrollTop:$('main section').eq(index).offset().top-1},400, 'easeOutCubic');
       return false;
+
     });
 
+    $(window).scroll(function(i){
+      $('main section').each(function(i){
+        let scroll = $(window).scrollTop(); 
+        s_idx = $(this).index(); 
 
+        console.log(s_idx); //0
+  
+        // 만약 현재 스크롤 값이 n 번째 콘텐츠의 위에서 떨어진 값보다 크면
+        if(scroll>=$('section').eq(s_idx).offset().top-1){
+          // $('.gnb a img').removeClass('block');
+          //해당하는 n번째 nav a img 태그에 서식을 적용하고 그 외 나머지는 block 서식을 제거한다.
+          gnb.eq(s_idx).find('a').find('img').addClass('block').parent().parent().siblings().find('img').removeClass('block');
+        }
+      });
+    });
+
+    $('.film ul li a').click(function(){
+      swal("작업중!","불편을 드려 죄송합니다","error");
+      return false;
+    });
 
 
     

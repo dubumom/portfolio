@@ -320,6 +320,9 @@ main .design_wrapper {position: relative;}
 .design_wrapper> article {
   position: absolute; left: 10px; top: 265px;
 }
+.design_wrapper> article> img {
+  width: 90px; height: 80px;
+}
 .sportright {
   width: 0px; height: 100px;
   background-image: url(../images/sportright.png);
@@ -472,8 +475,6 @@ main .design_wrapper {position: relative;}
 }
 
 
-
-
 /* 기타 작업물 서식 */
 main .work {background: paleturquoise; }
 
@@ -485,7 +486,7 @@ main .contact {position: relative;}
 
 form {
   width: 900px; height: 400px;
-  background-image: url(../images/Frame79.png);
+  background-image: url(../images/Frame80.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute; bottom: -2%; left: 50%;

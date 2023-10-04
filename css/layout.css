@@ -75,6 +75,8 @@ text-align: center;
 .gnb> ul> li {
   line-height: 40px;
   border-bottom: 2px solid linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  position: relative;
+  transition: 0.5s;
 }
 .gnb> ul> li::after {
   display: block;
@@ -106,23 +108,27 @@ text-align: center;
   background: rgba(255, 255, 255, 0.5);
 }
 
-
-/* 메인 section 공통 서식 */
-.profile, .publishing, .design, .work, .contact {
-  width: 100vw; height: 100vh;
-  overflow: hidden;
+.gnb> ul> li> a img {
+  display: none;
+  position: absolute; right: -30px; top: 0;
+  width: 30px;
+  transform-origin: 50% 50%;
+  animation: lp 4s linear infinite;
 }
+
+
+
 
 /* 메인의 wrapper  공통 서식 */
 .profile_wrapper {
   width: 1300px; height: 800px;
-  margin: 50px auto;
+  margin: 100px auto;
   /* border: 1px solid #ff0; */
 }
 .publishing_wrapper, .design_wrapper, .work_wrapper, .contact_wrapper {
   width: 1300px; height: 800px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 100px;
   /* border: 1px solid #ff0; */
 }
 
