@@ -98,7 +98,7 @@
     }
     
 
-    // 마우스 호버 시
+    // 프로필 - 마우스 호버 시
     $('.profile_photo').mouseenter(function(){
       $('.profile_photo img').css('transform','rotate(50deg');
       $('.profile_photo img:first-child').stop().animate({top:'530px'});
@@ -124,13 +124,14 @@
 
     let mleft = -202;
 
+    // 필름01
     function moveLeft01(){
       $('.film01 > ul').css('margin-left',mleft); /*-202 씩 이동하기*/
-      mleft -= 2;
+      mleft -= 1;
 
       //console.log(mleft);
 
-      if(mleft == -204){
+      if(mleft == -203){
         $('.film01> ul> li:first-child').insertAfter('.film01> ul> li:last-child');
       }else if (mleft == -404){
         mleft = -202;
@@ -148,23 +149,21 @@
       Timer01 = setInterval(moveLeft01,100);
     });
 
+    // 필름02
     function moveLeft02(){
-      $('.film02 > ul').css('margin-left',mleft); /*-202 씩 이동하기*/
-      mleft -= 2;
+      $('.film02 > ul').css('margin-left',mleft);
+      mleft -= 1;
 
-      //console.log(mleft);
 
-      if(mleft == -204){
+      if(mleft == -203){
         $('.film02> ul> li:first-child').insertAfter('.film02> ul> li:last-child');
       }else if (mleft == -404){
         mleft = -202;
       }
-
     };
 
     let Timer04 = setInterval(moveLeft02,100);
 
-    //마우스 오버 시 멈추게 하고 아웃 시 시간을 생성하여 움직이기게
     $('.pub_box01 .film02').hover(function(){
       clearInterval(Timer04);
     },function(){
@@ -172,6 +171,93 @@
       Timer04 = setInterval(moveLeft02,100);
     });
 
+    // 필름03
+    function moveLeft03(){
+      $('.film03 > ul').css('margin-left',mleft);
+      mleft -= 1;
+
+
+      if(mleft == -203){
+        $('.film03> ul> li:first-child').insertAfter('.film03> ul> li:last-child');
+      }else if (mleft == -404){
+        mleft = -202;
+      }
+    };
+
+    let Timer05 = setInterval(moveLeft03,100);
+
+    $('.pub_box02 .film03').hover(function(){
+      clearInterval(Timer05);
+    },function(){
+      clearInterval(Timer05);
+      Timer05 = setInterval(moveLeft03,100);
+    });
+
+    // 필름04
+    function moveLeft04(){
+      $('.film04 > ul').css('margin-left',mleft);
+      mleft -= 1;
+
+
+      if(mleft == -203){
+        $('.film04> ul> li:first-child').insertAfter('.film04> ul> li:last-child');
+      }else if (mleft == -404){
+        mleft = -202;
+      }
+    };
+
+    let Timer06 = setInterval(moveLeft04,100);
+
+    $('.pub_box02 .film04').hover(function(){
+      clearInterval(Timer06);
+    },function(){
+      clearInterval(Timer06);
+      Timer06 = setInterval(moveLeft04,100);
+    });
+
+    // 필름05
+    function moveLeft05(){
+      $('.film05 > ul').css('margin-left',mleft);
+      mleft -= 1;
+
+
+      if(mleft == -203){
+        $('.film05> ul> li:first-child').insertAfter('.film05> ul> li:last-child');
+      }else if (mleft == -404){
+        mleft = -202;
+      }
+    };
+
+    let Timer07 = setInterval(moveLeft05,100);
+
+    $('.pub_box03 .film05').hover(function(){
+      clearInterval(Timer07);
+    },function(){
+      clearInterval(Timer07);
+      Timer07 = setInterval(moveLeft05,100);
+    });
+
+    // 필름06
+    function moveLeft06(){
+      $('.film06 > ul').css('margin-left',mleft);
+      mleft -= 1;
+
+
+      if(mleft == -203){
+        $('.film06> ul> li:first-child').insertAfter('.film06> ul> li:last-child');
+      }else if (mleft == -404){
+        mleft = -202;
+      }
+    };
+
+    let Timer08 = setInterval(moveLeft06,100);
+
+    $('.pub_box03 .film06').hover(function(){
+      clearInterval(Timer08);
+    },function(){
+      clearInterval(Timer08);
+      Timer08 = setInterval(moveLeft06,100);
+    });
 
 
 

@@ -56,7 +56,7 @@
 }
 .profile_txt {
   position: relative;
-  top: 75px;
+  top: 30px;
 }
 .profile_txt ul {}
 .profile_txt ul li {
@@ -100,7 +100,7 @@
     /*프로필 - 스킬 */
 .chartBars {
   position: relative;
-  top: 210px;
+  top: 150px;
   max-width: 600px;
   height: 140px;
   margin-left: 100px;
@@ -252,7 +252,7 @@
   width: 450px;
 }
 
-    /*퍼블리싱 - 자동 필름*/
+    /*퍼블리싱 - 무한슬라이드*/
 
 .pub_photo .film {
   width: 606px;
@@ -341,9 +341,11 @@ main .design_wrapper {position: relative;}
 
     /* 디자인 - 설명: 소개, 목적 */
 
+.expand> li {position: absolute;} 
+
 .design_txt {
   position: absolute;
-  left: 692px; top: 205px;
+  left: 692px; top: 270px;
 }
 .explan01> p> strong {
   font-size: 16px;
@@ -367,8 +369,14 @@ main .design_wrapper {position: relative;}
 .explan01> p {
   line-height: 20px;
 }
+.expand {height: 205px;}
+
+
 
     /* 디자인 - 설명: 컬러컨셉 */
+
+.col {position: absolute;}
+
 .explan02 h4 {
   font-size: 16px;
   font-weight: bold;
@@ -390,6 +398,7 @@ main .design_wrapper {position: relative;}
   width: 70px; height: 80px;
   background: #eee;
 }
+    /* 시장하시죠 */
 .explan02 ul> li:first-child> span {
   background: #492B23;
 }
@@ -404,6 +413,40 @@ main .design_wrapper {position: relative;}
   text-align: center;
   padding: 10px 0 5px 0;
 }
+    /* 뮤지엄고 */
+.col02 ul> li:first-child> span{
+  background: #B3A48F;
+}
+.col02 ul> li:nth-child(2)> span{
+  background: #361B00;
+}
+.col02 ul> li:last-child> span{
+  background: #F9F9F9;
+}
+    /* 판다월드 */
+.col03 ul> li:first-child> span{
+  background: #ACC691;
+}
+.col03 ul> li:nth-child(2)> span{
+  background: #FAE7EC;
+}
+.col03 ul> li:last-child> span{
+  background: #FBFAEF;
+}
+    /* 오키친 */
+.col04 ul> li:first-child> span{
+  background: #CE010E;
+}
+.col04 ul> li:nth-child(2)> span{
+  background: #FDF100;
+}
+.col04 ul> li:nth-child(3)> span{
+  background: #2E5902;
+}
+.col04 ul> li:last-child> span{
+  background: #FFFDE4;
+}
+
 
     /* 디자인 - 설명: 사용툴 */
 
@@ -476,7 +519,7 @@ main .design_wrapper {position: relative;}
 
 
 /* 기타 작업물 서식 */
-main .work {background: paleturquoise; }
+/* main .work {background: paleturquoise; } */
 
 
 /* 연락처 서식 */
