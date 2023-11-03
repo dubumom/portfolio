@@ -414,4 +414,54 @@
         $('.sportright').stop().animate({'width':'0px'},2000);
       }
     });
+
+
+    //  디자인 클릭 이벤트
+
+      //시장하시죠
+    $('.ayh').click(function(){
+      $('.explan01, .col, .dp, .design_caption> ul> li').hide();
+      $('.ex01, .col01').show();
+      return false;
+    });
+
+      //뮤지엄고
+    $('.mu').click(function(){
+      $('.explan01, .col, .dp, .design_caption> ul> li').hide();
+      $('.ex02, .col02').show().css('z-index','10');
+      return false;
+    });
+
+    //판다월드
+    $('.pan').click(function(){
+      $('.explan01, .col, .dp, .design_caption> ul> li').hide();
+      $('.ex03, .col03').show().css('z-index','10');
+      return false;
+    });
+
+    //오뚜기
+    $('.oh').click(function(){
+      $('.explan01, .col, .dp, .design_caption> ul> li').hide();
+      $('.ex04, .col04').show().css('z-index','10');
+      return false;
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   }); 

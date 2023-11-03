@@ -84,7 +84,7 @@ $(document).ready(function(){
     });
 
 
-    // 작업중
+    //작업중
     $('.design_photo> ul> li').click(function(){
       swal("작업중!","불편을 드려 죄송합니다","error");
       return false;
